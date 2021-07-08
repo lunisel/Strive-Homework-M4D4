@@ -1,5 +1,5 @@
-import { Card } from "react-bootstrap";
-import MyBadgeFunction from "./MyBadge";
+import { Card } from "react-bootstrap"
+import MyBadgeFunction from "./MyBadge"
 
 const MyBook = (prop) => (
     
