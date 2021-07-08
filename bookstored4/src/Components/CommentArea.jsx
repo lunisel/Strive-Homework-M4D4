@@ -2,8 +2,6 @@ import {Component} from "react"
 import {Row, ListGroup} from "react-bootstrap"
 import Error from "./Error"
 import Loading from "./Loading"
-import CommentsList from "./CommentsList"
-import AddComment from "./AddComment"
 
 class BookComments extends Component {
 
@@ -54,11 +52,17 @@ class BookComments extends Component {
                 {this.state.isError === true && <Error/>}
                 {this.state.isLoading === true ? <Loading /> : 
                 <ListGroup>
-                    <img src={this.props.b.img} className="img-fluid"/>
-                    <CommentsList id={this.props.b.asin}/>
+                    <img src={this.props.b.img} />
+                    {this.state.bookComments.map(c => (
+                        
+                        <ListGroup.Item key={c._id}>
+                           <p>Rating: {c.rate} </p>
+                           <p>Comment: {c.comment} </p>
+                        </ListGroup.Item>
+                    ))}
                 </ListGroup>
                 }
-            <AddComment />
+            
             </Row>
             </div>
         )
