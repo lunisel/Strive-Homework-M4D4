@@ -27,7 +27,7 @@ class BookComments extends Component {
                     isLoading: false,
                     isError: false
                 })
-                console.log(comments)
+                console.log(this.state.bookComments)
             } else {
                 this.setState({
                     isLoading: false,
@@ -52,14 +52,7 @@ class BookComments extends Component {
                 {this.state.isError === true && <Error/>}
                 {this.state.isLoading === true ? <Loading /> : 
                 <ListGroup>
-                    <img src={this.props.b.img} />
-                    {this.state.bookComments.map(c => (
-                        
-                        <ListGroup.Item key={c._id}>
-                           <p>Rating: {c.rate} </p>
-                           <p>Comment: {c.comment} </p>
-                        </ListGroup.Item>
-                    ))}
+                    <img src={this.props.b.img} alt="book-cover" />
                 </ListGroup>
                 }
             

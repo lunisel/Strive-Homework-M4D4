@@ -20,7 +20,7 @@ class BookList extends Component {
             {
                 books.map(book => (
                     
-                    <Col key={book.id} xs={6} md={4} lg={3} className="my-1" style={{height: "30rem"}}
+                    <Col key={book.asin} xs={6} md={4} lg={3} className="my-1" style={{height: "30rem"}}
                     onClick={ () => {
                         this.setState({
                             selectedBook: book

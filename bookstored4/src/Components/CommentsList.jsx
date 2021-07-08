@@ -1,5 +1,6 @@
-const CommentsList = (prop) => {
 
+const CommentsList = (prop) => {
+    
 }
 
 export default CommentsList
