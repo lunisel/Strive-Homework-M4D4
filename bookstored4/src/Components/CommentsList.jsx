@@ -1,6 +1,5 @@
 
-const CommentsList = (prop) => {
-    
+const CommentsList = async (prop) => {
 }
 
 export default CommentsList
