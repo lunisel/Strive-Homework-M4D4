@@ -28,11 +28,11 @@ class AddCommentForm extends Component {
             body: JSON.stringify(this.state.commentForm),
             headers: {
               'Content-type': 'application/json',
-              "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRjNjlkNmIzNTgxNzAwMTVjMjI3NDEiLCJpYXQiOjE2MjU3ODIwOTQsImV4cCI6MTYyNjk5MTY5NH0.v44WMUeYNd9fGzniopkrLzKiWTFyhBHf3UAfrTTUGXY"
+              'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRjNjlkNmIzNTgxNzAwMTVjMjI3NDEiLCJpYXQiOjE2MjU3ODIwOTQsImV4cCI6MTYyNjk5MTY5NH0.v44WMUeYNd9fGzniopkrLzKiWTFyhBHf3UAfrTTUGXY',
             }
           });
 
-      console.log(response);
+      console.log(this.state.commentForm);
 
       if (response.ok) {
         alert("Comment Added Successfully!");
